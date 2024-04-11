@@ -5,58 +5,50 @@ import { useState } from 'react';
 
 function Code4() {
   const codeString = `
-    num2 = 100
-    newNumber1 = 90
-    newNumber2 = 7
-    thala_for_a__reason = 18
+    num_a = 15
+    num_b = 4
+    num_c = 7
+    eila_jaadu = 21
 
-    if (newNumber1 <=0):
-      print(newNumber2)
-    elif (newNumber1 % 2 == 0):
-      print((newNumber2 % 2) + 1 * 4)
-    elif ((newNumber2+9) == thala_for_a__reason):
-      print(".")
-    print((newNumber1 / 10) * 2);
-    thala_for_a__reason * 2 + 4 / 2;
+    if num_a > num_c:
+        print(num_b * 3)
+    elif num_a % 5 == 0:
+        print((num_b % 2) + 3 * 4)
+    elif (num_c + 3) == eila_jaadu:
+        print(".")
 
-    def something1(x, y):
-      if x == 0 and y == 0:
-        return 0,0
-      elif x == 0:
-        return y, y
-      elif y == 0:
-        return x*2
-      else:
-        return something1(x-1, y-1)
-      
-    printSomething1 = something1(3,1)
+    print((num_a / 5) * 2)
+    print(eila_jaadu * 2 + 6 / 2)
 
-    one_more = [11,2,312,224, 12, 45, 98, 45, 65]
+    def calculate_something(x, y):
+        if x == 0 and y == 0:
+            return 0, 0
+        elif x == 0:
+            return y, y
+        elif y == 0:
+            return x * 3
+        else:
+            return calculate_something(x - 1, y - 1)
 
-    one_more.sort()
-    print(one_more[-3])
+    print_calculate = calculate_something(6, 2)
+    print(print_calculate)
 
+    def check_number(num_d, num_e):
+        if num_d == 6 and num_e == 0:
+            print(num_e)
+        elif num_d == 0:
+            return num_a
+        else:
+            return "."
 
-    def something2(num1, num3):
-      if num1 == 4 and num3 == 0:
-        print(num3)
-      elif num1 == 0:
-        return num2
-      else:
-        return "."
+    def calculate_result(num_f, num_g):
+        new_list = [num_f * 3, num_g * 2, num_f, num_g * 2, num_f - 5, num_a / 5]
+        first_item = new_list[-1]
+        second_item = new_list[0]
+        print((second_item * 2) + 11)
 
-
-    def something4(num3, num7):
-      newthing = [num3*4, num7 *0, num3, num7*1, num3*2, num2/10]
-      firstElement = newthing[-1]
-      lastElement = newthing[0]
-      print((lastElement * 1) / 3 + 12)
-
-
-    something4(3,1)
-    something2(4,4)
-    print(printSomething1)
-    print(one_more[-2])
+    calculate_result(3, 5)
+    check_number(6, 6)
   `
 
   const [input , setInput] = useState("");
